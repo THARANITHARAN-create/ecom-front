@@ -13,7 +13,7 @@ exports.postProducts=async(req,res)=>{
     const{name,price,description}=req.body;
     const newProduct=new Product({
         name,price,description
-    })
+    })  
     await newProduct.save();
     res.status(201).json(newProduct);
     } 
